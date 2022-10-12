@@ -24,10 +24,14 @@ const maxItemAssociation = (history) => {
 	const maxCount = Math.max(
 		...variables.map((recommends) => recommends.length)
 	)
+	const filteredArray = variables
+		.filter((variable) => variable.length === maxCount)
 
-	return variables
-		.find((variable) => variable.length === maxCount)
-		.sort()
+	const minCharCode = Math.min(
+		...filteredArray.map((variable) => variable.sort()[0].charCodeAt(0))
+	)
+
+	return filteredArray.find((item) => item[0].charCodeAt(0) === minCharCode)
 }
 
 console.log(maxItemAssociation([
@@ -44,7 +48,7 @@ const homeWork = (a) => {
 	return myFunc(a)
 
 	function myFunc(b) {
-		if (!b) {
+		if (b === undefined) {
 			return result
 		}
 
@@ -53,4 +57,4 @@ const homeWork = (a) => {
 	}
 }
 
-console.log(homeWork(1)(2)(3)(4)())
+console.log(homeWork(1)(2)(0)(4)())
