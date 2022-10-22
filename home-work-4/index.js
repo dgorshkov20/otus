@@ -29,15 +29,10 @@ const tree = async (path) => {
 		})
 
 	}
-		// const getStructureByPath = async () => {
-
-
-	// await getStructureByPath()
-	console.log(fileStructure)
-
+	return fileStructure
 }
 
-tree('foo/')
+tree('foo/').then((data) => console.log(data))
 
 // {
 // 	"files": [
