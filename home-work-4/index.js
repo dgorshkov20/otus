@@ -1,4 +1,5 @@
 import {readdir } from 'node:fs/promises'
+import path from 'path'
 
 const concatPath = (currentPath, item) => {
 	return currentPath[currentPath.length - 1] === '/' ? currentPath + item.name : `${currentPath}/${item.name}`
@@ -32,7 +33,7 @@ const tree = async (path) => {
 	return fileStructure
 }
 
-tree('foo/').then((data) => console.log(data))
+tree(process.argv[2]).then((data) => console.log(data))
 
 // {
 // 	"files": [
