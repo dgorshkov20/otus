@@ -5,7 +5,7 @@
   "main": "home-work-1.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --env=jsdom"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/dgorshkov20/otus#readme",
   "dependencies": {
-    "chalk": "^5.1.2"
+    "chalk": "^5.1.2",
+    "jest": "^29.2.2"
+  },
+  "devDependencies": {
+    "jest-environment-jsdom": "^29.3.0"
   }
 }

@@ -28,7 +28,14 @@ const getPath = (element) => {
 
 	})
 
-	return attributes.reverse().join(' ')
+	const path = attributes.reverse().join(' ')
+	const uniqElem = document.querySelectorAll(path).length === 1
+	if (uniqElem) {
+		return path
+	} else {
+	return 'элемент не является уникальным'
+	}
 }
-console.log(getPath(document.querySelector('li')))
+
+module.exports = getPath
 
