@@ -85,7 +85,7 @@ const schema = buildSchema(`
 
 const root = {
 	getAllUsers: () => {
-		const usersWithOrders = users.map((user) => {
+		return users.map((user) => {
 			const newOrders = orders.filter((order) => order.email === user.email)
 
 			return {
@@ -93,8 +93,6 @@ const root = {
 				orders: newOrders
 			}
 		})
-
-		return usersWithOrders
 	},
 	getAllProducts: () => {
 		return products
