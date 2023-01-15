@@ -1,9 +1,11 @@
+import {CustomRequest, CustomResponse, HandleBarsResponseType} from "../types";
+
 const {Router} = require('express')
 const auth = require('../middleware/auth')
 const User = require('../models/user')
 const router = Router()
 
-router.get('/', auth, async (req, res) => {
+router.get('/', auth, async (req: CustomRequest, res: HandleBarsResponseType) => {
   res.render('profile', {
     title: 'Профиль',
     isProfile: true,
@@ -11,12 +13,12 @@ router.get('/', auth, async (req, res) => {
   })
 })
 
-router.post('/', auth, async (req, res) => {
+router.post('/', auth, async (req: CustomRequest, res: CustomResponse) => {
   try {
     const user = await User.findById(req.user._id)
 
-    const toChange = {
-      name: req.body.name
+    const toChange: {[key: string]: string} = {
+      name: req.body.name,
     }
 
     if (req.file) {
