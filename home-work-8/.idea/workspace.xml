@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ac4704d-e630-4265-b68d-0797d5c9122a" name="Changes" comment="routing types">
-      <change afterPath="$PROJECT_DIR$/models/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/course.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/hbs-helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/hbs-helpers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validators.ts" afterDir="false" />
-    </list>
+    <list default="true" id="3ac4704d-e630-4265-b68d-0797d5c9122a" name="Changes" comment="typing" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +27,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="C:\Users\Дмитрий\Desktop\app\otus\home-work-8\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -44,7 +40,7 @@
       <option name="presentableId" value="Default" />
       <updated>1673370482148</updated>
       <workItem from="1673370483804" duration="2000" />
-      <workItem from="1673783800511" duration="2331000" />
+      <workItem from="1673783800511" duration="4560000" />
     </task>
     <task id="LOCAL-00001" summary="routing types">
       <created>1673785711074</created>
@@ -53,7 +49,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673785711074</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="typing">
+      <created>1673788379755</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673788379755</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -72,6 +75,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="routing types" />
-    <option name="LAST_COMMIT_MESSAGE" value="routing types" />
+    <MESSAGE value="typing" />
+    <option name="LAST_COMMIT_MESSAGE" value="typing" />
   </component>
 </project>
