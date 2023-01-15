@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ac4704d-e630-4265-b68d-0797d5c9122a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/add.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/auth.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/card.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/courses.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/courses.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/home.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/orders.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/orders.ts" afterDir="false" />
+    <list default="true" id="3ac4704d-e630-4265-b68d-0797d5c9122a" name="Changes" comment="routing types">
+      <change afterPath="$PROJECT_DIR$/models/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/course.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/course.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/hbs-helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/hbs-helpers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/validators.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -44,8 +44,16 @@
       <option name="presentableId" value="Default" />
       <updated>1673370482148</updated>
       <workItem from="1673370483804" duration="2000" />
-      <workItem from="1673783800511" duration="1312000" />
+      <workItem from="1673783800511" duration="2331000" />
     </task>
+    <task id="LOCAL-00001" summary="routing types">
+      <created>1673785711074</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673785711074</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -61,5 +69,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="routing types" />
+    <option name="LAST_COMMIT_MESSAGE" value="routing types" />
   </component>
 </project>

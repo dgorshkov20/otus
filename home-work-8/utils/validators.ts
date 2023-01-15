@@ -1,10 +1,16 @@
+import {CustomRequest} from "../types";
+
 const {body} = require('express-validator')
 const User = require('../models/user')
+
+type ValidateReqType = {
+  req: CustomRequest
+}
 
 exports.registerValidators = [
     body('email')
     .isEmail().withMessage('Введите корректный email')
-    .custom(async (value, {req}) => {
+    .custom(async (value: string, {req}: ValidateReqType) => {
         try {
             const user = await User.findOne({email: value})
             if (user) {
@@ -19,7 +25,7 @@ exports.registerValidators = [
     .isLength({min: 6, max: 56})
     .isAlphanumeric()
     .trim(),
-    body('confirm').custom((value, {req}) => {
+    body('confirm').custom((value: string, {req}: ValidateReqType) => {
         if (value !== req.body.password) {
             throw new Error('Пароли должны совпадать')
         }

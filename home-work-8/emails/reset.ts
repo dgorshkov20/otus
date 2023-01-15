@@ -1,6 +1,8 @@
-const {EMAIL_FROM, BASE_URL} = require('../keys/index')
+import {EmailConfig} from "../types/EmailConfig";
 
-module.exports = function(email, token) {
+const {EMAIL_FROM, BASE_URL} = require('../keys')
+
+module.exports = function(email: EmailConfig, token: string) {
     return {
         to: email,
         from: EMAIL_FROM,

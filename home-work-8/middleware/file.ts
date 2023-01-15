@@ -1,27 +1,24 @@
+import {CustomRequest} from "../types";
+
 const multer = require('multer')
-// const path = require('path')
-// console.log(path.join(__dirname, '..', 'images'))
-// console.log()
 
 const dateFormat = () => {
     const now = new Date().toISOString()
     return now.replace(/:/g, '-')
 }
 
-
-
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => {
+  destination: (req : CustomRequest, file: object, cb: (error: Error | null, path: string) => void) => {
     cb(null, 'images/')
   },
-  filename: (req, file, cb) => {
+  filename: (req : CustomRequest, file: {originalname: string}, cb: (error: Error | null, path: string) => void) => {
     cb(null, dateFormat() + '-' + file.originalname)
   }
 })
 
 const allowedTypes = ['image/png', 'image/jpg', 'image/jpeg']
 
-const fileFilter = (req, file, cb) => {
+const fileFilter = (req: CustomRequest, file: {mimetype: string}, cb: (error: Error | null, path: string | boolean) => void) => {
   if (allowedTypes.includes(file.mimetype)) {
     cb(null, true)
   } else {

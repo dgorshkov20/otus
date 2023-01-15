@@ -1,4 +1,4 @@
-import {CartItem, CourseType, CustomRequest, CustomResponse, HandleBarsResponseType} from "../types";
+import {CartItem, CourseType, CustomRequest, CustomResponse} from "../types";
 
 const {Router} = require('express')
 const {validationResult} = require('express-validator')
@@ -11,7 +11,7 @@ function isOwner(course: CourseType, req: CustomRequest) {
   return course.userId.toString() === req.user._id.toString()
 }
 
-router.get('/', async (req: CustomRequest, res: HandleBarsResponseType) => {
+router.get('/', async (req: CustomRequest, res: CustomResponse) => {
   try {
     const courses = await Course.find()
 
@@ -27,7 +27,7 @@ router.get('/', async (req: CustomRequest, res: HandleBarsResponseType) => {
 
 })
 
-router.get('/:id/edit', auth, async (req: CustomRequest, res: CustomResponse & HandleBarsResponseType) => {
+router.get('/:id/edit', auth, async (req: CustomRequest, res: CustomResponse) => {
   if (!req.query.allow) {
     return res.redirect('/')
   }
@@ -74,7 +74,7 @@ router.post('/edit', auth, courseValidators, async (req: CustomRequest, res: Cus
 
 })
 
-router.get('/:id', async (req: CustomRequest, res: HandleBarsResponseType) => {
+router.get('/:id', async (req: CustomRequest, res: CustomResponse) => {
   try {
     const course = await Course.findById(req.params.id)
     res.render('course', {

@@ -1,11 +1,11 @@
-import {CustomRequest, CustomResponse, HandleBarsResponseType} from "../types";
+import {CustomRequest, CustomResponse} from "../types";
 
 const {Router} = require('express')
 const auth = require('../middleware/auth')
 const User = require('../models/user')
 const router = Router()
 
-router.get('/', auth, async (req: CustomRequest, res: HandleBarsResponseType) => {
+router.get('/', auth, async (req: CustomRequest, res: CustomResponse) => {
   res.render('profile', {
     title: 'Профиль',
     isProfile: true,
