@@ -1,0 +1,17 @@
+.weather {
+    width: 800px;
+    margin: 0 auto;
+    min-height: 400px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.title {
+    text-align: center;
+}
+
+.rest-date {
+    display: flex;
+    justify-content: space-around;
+}
