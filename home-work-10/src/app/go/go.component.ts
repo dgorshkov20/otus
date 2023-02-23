@@ -11,7 +11,6 @@ export class GoComponent {
   }
 
   ngAfterViewInit() {
-    console.log('init go')
     console.log(this.goService.checkWord('Hello'))
   }
 }
