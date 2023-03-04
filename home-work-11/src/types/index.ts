@@ -8,3 +8,10 @@ export interface TranslaterResponse {
     translatedText: string
   }
 }
+
+export interface Settings {
+  originLang: string;
+  studiedLang: string;
+  wordCount: string;
+  exerciseTime: string;
+}

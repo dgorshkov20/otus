@@ -1,1 +1,8 @@
-<p>settings works!</p>
+<div>
+  <p>Языки: {{originLang}} - {{studiedLang}}</p>
+  <div>Количество слов в упражнении: <input (input)="onChangeWordCount($event)" type="number" value="{{wordCount}}"></div>
+  <br>
+  <div>Время упражнения: <input type="number" (input)="onChangeExerciseTime($event)" value="{{exerciseTime}}"> сек</div>
+  <br>
+  <button (click)="saveSettings()">Сохранить</button>
+</div>
