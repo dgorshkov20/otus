@@ -1,0 +1,14 @@
+.recently-wrapper {
+  display: flex;
+}
+
+.recently-add {
+  width: 50%;
+  border-right: 1px solid black;
+  height: 100vh;
+  padding: 10px;
+}
+
+.recently-dictionary {
+  padding: 10px;
+}

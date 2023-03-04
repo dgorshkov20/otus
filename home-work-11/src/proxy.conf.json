@@ -1,0 +1,8 @@
+{
+  "/get": {
+    "target": "https://api.mymemory.translated.net",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug"
+  }
+}

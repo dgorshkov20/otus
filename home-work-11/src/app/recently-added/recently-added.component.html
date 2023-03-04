@@ -1,0 +1,19 @@
+<div [className]="'recently-wrapper'">
+  <div [className]="'recently-add'">
+    <h2>Добавить слово</h2>
+    <input (keyup)="onChange($event)" type="text">
+    <button (click)="translate()">Перевести</button>
+    <p>
+      Перевод: {{translation}}
+    </p>
+    <button (click)="save()">Сохранить</button>
+  </div>
+
+  <div [className]="'recently-dictionary'">
+    <h2>Словарь</h2>
+    <h3 *ngIf="!dictionary?.length">В словаре пока ничего нет</h3>
+    <p *ngFor="let word of dictionary">
+      {{word.translation}} - {{word.segment}}
+    </p>
+  </div>
+</div>
