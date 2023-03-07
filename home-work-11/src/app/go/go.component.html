@@ -1,0 +1,14 @@
+<div>
+  <button *ngIf="!start" (click)="startExercise()">Начать</button>
+  <div *ngIf="start">
+    <h4>Оставшееся время: {{timer}}</h4>
+    <p>Осталось слов: {{wordCount}}</p>
+    <p>Верно: {{right}}</p>
+    <p>Неверно: {{wrong}}</p>
+    <div>
+      <span>{{words[currentWordIndex].translation}} - </span>
+      <input type="text" (input)="changeInputValue($event)">
+      <button (click)="checkAnswer()">Проверить</button>
+    </div>
+  </div>
+</div>

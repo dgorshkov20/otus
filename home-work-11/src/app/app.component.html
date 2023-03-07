@@ -1,0 +1,27 @@
+<nav>
+  <ul [className]="'nav'">
+    <li [className]="'nav-item'">
+      <a
+        routerLink="/settings"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+      >Settings</a>
+    </li>
+    <li [className]="'nav-item'">
+      <a
+        routerLink="/go"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+      >GO</a>
+    </li>
+    <li [className]="'nav-item'">
+      <a
+        routerLink="/recently"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+      >Recently</a>
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
