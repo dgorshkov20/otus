@@ -9,11 +9,7 @@ export class GoService {
   constructor(public resentlyAddedService: ResentlyAddedService) {
   }
 
-  checkWord(word: string) {
-    const words = this.resentlyAddedService.getWords() || []
-    const findTranslation = words.find((wordObj: any) =>
-      wordObj.translation.toLowerCase() === word.toLowerCase())
-
-    return findTranslation ? 'Верно' : 'Неверно'
+  checkWord(word: string, currentWord: string) {
+    return word === currentWord
   }
 }

@@ -1,7 +1,7 @@
 <div [className]="'recently-wrapper'">
   <div [className]="'recently-add'">
     <h2>Добавить слово</h2>
-    <input (keyup)="onChange($event)" type="text">
+    <input (input)="onChange($event)" type="text">
     <button (click)="translate()">Перевести</button>
     <p>
       Перевод: {{translation}}
