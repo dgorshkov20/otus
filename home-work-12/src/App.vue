@@ -2,7 +2,9 @@
   .main-wrapper {
     width: 400px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
   }
 </style>
 

@@ -20,8 +20,6 @@ const router = VueRouter.createRouter({
 	routes
 })
 
-
-
 const app = createApp(App)
 
 app.use(router)
