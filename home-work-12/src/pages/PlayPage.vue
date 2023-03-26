@@ -10,8 +10,9 @@
 import CalculatorComponent from "@/components/CalculatorComponent";
 import {ref} from "vue";
 
-const settings = JSON.parse(localStorage.getItem('settings'))
-const time = ref(settings.time * 60)
+let timerId
+
+const time = ref(0)
 
 export default {
   data() {
@@ -21,13 +22,19 @@ export default {
   },
   components: {CalculatorComponent},
   mounted() {
-    const timerId = setInterval(() => {
+    const settings = JSON.parse(localStorage.getItem('settings'))
+    time.value = settings?.time ? settings.time * 60 : 0
+     timerId = setInterval(() => {
       time.value -= 1
       if (time.value <= 0) {
         clearInterval(timerId)
       }
     }, 1000)
   },
+
+  unmounted() {
+    clearInterval(timerId)
+  }
 }
 </script>
 

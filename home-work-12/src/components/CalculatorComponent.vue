@@ -41,6 +41,7 @@
   const currentTask = ref(0)
   const inputValue = ref('')
   const isRight = ref(false)
+  const isFirstClick = ref(false)
 
   export default {
     data() {
@@ -48,7 +49,8 @@
         inputValue,
         testData,
         currentTask,
-        isRight
+        isRight,
+        isFirstClick
       }
     },
     setup() {
@@ -59,6 +61,7 @@
         inputValue.value += val
       },
       checkAnswer() {
+        isFirstClick.value = true
         isRight.value = eval(inputValue.value) === testData[currentTask.value].answer
         inputValue.value = ''
         if (testData[currentTask.value + 1]) {
@@ -96,6 +99,8 @@
     </div>
   </div>
     <button @click="checkAnswer">Check Answer</button>
-  <p v-if="isRight">Верно</p>
-  <p v-else>Не Верно</p>
+  <div v-if="isFirstClick">
+    <p v-if="isRight">Верно</p>
+    <p v-else>Не Верно</p>
+  </div>
 </template>

@@ -10,6 +10,8 @@
   const division = ref(false)
   const exponent = ref(false)
 
+  console.log(time.value)
+
   const onPlayClick = () => {
     const settings = {
       time: time.value,
